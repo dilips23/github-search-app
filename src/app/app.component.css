@@ -1,0 +1,57 @@
+article {
+  padding-top: 10rem;
+  height: 10vh;
+  max-width: 350pt;
+  word-wrap: normal;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+article h2 {
+  margin-left: 2vw;
+  font-size: 3rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  position: static;
+  top: 30vh;
+  left: 2vh;
+  width: 20vh;
+  padding: 2pt;
+  font-size: 10pt; 
+  font-weight: 30pt;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+  background-color: #1783db;
+}
+
+.navbar {
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
