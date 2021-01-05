@@ -1,0 +1,37 @@
+  <h3>List of Github profiles</h3>
+  <div *ngIf="profiles">
+    <div>
+      
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col-0">ID</th>
+              <th scope="col-1">NAME</th>
+              <th scope="col-1">NODE ID</th>
+              <th scope="col-2">AVATAAR URL</th>
+              <th scope="col-2">HTML URL</th>
+              <th scope="col-2">REPOS URL</th>
+              <th scope="col-1">TYPE</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let profile of profiles">
+            <tr>
+              <th scope="row">{{profile.id}}</th>
+            
+              <td (click)="onProfileNameSelected(profile)"> {{profile.login}} </td>
+            
+              <td> {{profile.node_id}} </td>
+            
+              <td> {{profile.avatar_url}} </td>
+            
+              <td> {{profile.html_url}} </td>
+
+              <td>{{profile.repos_url}}</td>
+            
+              <td> {{profile.type}} </td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+</div>

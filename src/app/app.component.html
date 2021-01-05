@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Search App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" defer>
 </head>
 <body>
 
@@ -11,24 +13,14 @@
     
   </header>
 
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <article>
-        <h2>Github Search</h2>
-        <pre>Search public user profiles from Github.</pre> 
-        <pre>Click on the Search button. Click on the History button, to visit your search history page.</pre>
-      </article>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="btn-group-lg navbar">
-          <button class="btn btn-primary" ng-ref="/search" >Search</button>
-          |
-          <button class="btn btn-primary" ng-ref="#">History</button>
-        </div>
-      </div>
-    </div>
-    </div>
+      <!-- <div class="container"> -->
+        <router-outlet></router-outlet>
+      <!-- </div> -->
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+              integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
 </body>
 </html>

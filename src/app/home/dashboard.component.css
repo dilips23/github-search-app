@@ -1,0 +1,55 @@
+article {
+  padding: 3rem;
+  height: 10vh;
+  max-width: 100%;
+  word-wrap: normal;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+article h2 {
+  margin-left: 2vh;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  position: static;
+  width: 100pt;
+  padding: 2pt;
+  margin: 2pt;
+  font-size: 10pt; 
+  font-weight: 30pt;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+  background-color: #3777ac;
+  color: whitesmoke;
+}
+
+.navbar {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
