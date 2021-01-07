@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   selectedProfile: UserProfile; // For details view of the profile
   profileDetail: ProfileDetail;
   flag: boolean = true;
+  SEARCH_STATUS = 'failed';
 
   profileList: any[] = [];
 
@@ -29,10 +30,14 @@ export class SearchComponent implements OnInit {
   }
 
   public getProfileDetail() {
-    console.log('getProfileDetail called.' );
     this.profileSearchService.getUserDetailsByName(this.selectedProfile.login).subscribe(profileDetail => {
       this.profileDetail = profileDetail;
-      console.log(this.profileDetail.name);
+      if (profileDetail) {
+        this.SEARCH_STATUS = 'success';
+      } 
+        this.selectedProfile.status = this.SEARCH_STATUS;
+        this.profileSearchService.postUserProfile(this.selectedProfile);
+       
     });
   }
 

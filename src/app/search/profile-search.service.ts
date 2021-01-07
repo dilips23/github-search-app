@@ -15,7 +15,7 @@ export class ProfileSearchService {
   perPage = 500;
 
   profileSelected = new EventEmitter<UserProfile>();
-  userProfileList: UserProfile[] = [];
+  // userProfileList: UserProfile[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -26,13 +26,28 @@ export class ProfileSearchService {
 
   // search user details by name
   public getUserDetailsByName(profileName: string) {
-    return this.http.get<ProfileDetail>("https://api.github.com/users/" + profileName + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
-    console.log(profileName + ' in the service.');
+    return this.http.get<ProfileDetail>(this.gitUrl + "/" + profileName + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
   }
 
   // search user details by repos
   public getUserDetailsByRepos() {
 
+  }
+
+  // Store search record - Save in History records.
+  public postUserProfile(userProfile: UserProfile) {
+    let url = 'http://localhost:3000/feed/userprofile';
+    this.http.post(url, userProfile).subscribe(err => {
+      console.log(err);
+    });
+  }
+  
+  // Update profile set favorite tag. mapping(id) -> History list
+  public updateUserProfile(userProfile: UserProfile) {
+    let url = 'http://localhost:3000/feed/userprofile/' + userProfile.id;
+    this.http.put(url, { login: userProfile.login, isFavorite: userProfile.isFavorite }).subscribe(res => {
+      console.log(res);
+    })
   }
 
   public handleErrors(error: HttpErrorResponse) {

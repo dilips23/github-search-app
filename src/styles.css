@@ -8,4 +8,7 @@
   box-sizing: inherit;
 }
 
+.hiperlink {
+  cursor: pointer;
+}
 

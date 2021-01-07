@@ -21,7 +21,6 @@ export class ProfileListComponent implements OnInit {
   }
 
   onProfileNameSelected(profile: UserProfile) {
-     console.log('name selected.' + profile.login);
     this.profileSerachService.profileSelected.emit(profile);
   }
 }

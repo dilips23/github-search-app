@@ -1,1 +1,48 @@
-<p>user-detail works!</p>
+<div class="container" *ngIf="profile">
+  <div class="card">
+    <div class="card-header">
+        <!-- Name-->
+        {{profile.name}}<small>{{profile.login}}</small>
+        <span *ngIf="profile.company">, Works at {{profile.company}},</span> {{profile.location}}
+    </div>  
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="Profile Image">
+        </div>
+        <div class="col-sm-5">
+          <ul class="list-group">
+						<li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+						<li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+						<li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+						<li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <p>
+            <span class="label label-default">{{profile.followers}} Followers </span> |
+						<span class="label label-primary">Following {{profile.following}} </span> |
+						<span class="label label-success">{{profile.public_gists}} Public gists </span> |
+						<span class="label label-info">{{profile.public_repos}} Public Repos</span>
+          </p>
+          <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
+          <!-- <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Repos</h3>
+            </div>
+            <div class="panel-body" *ngFor="let repo of repos">
+              <p class="clearfix">
+                {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on github</a>
+              </p>
+              <p>{{repo.description}}</p>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

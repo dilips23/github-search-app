@@ -15,6 +15,9 @@ export class UserProfile {
   //  public receivedEventsUrl: string;
    public type: string;
   //  public siteAdmin: string;
+   public status: string;
+   public isFavorite: string;
+
   constructor(
      login: string,
      id: string,
@@ -42,4 +45,21 @@ export class UserProfile {
     this.repos_url = repos_url;
     this.type = type;
   }
+
+  get searchStatus(): string {
+    return this.status;
+  }
+
+  set searchStatus(val) {
+    this.status = val;
+  }
+
+  get favTag(): string {
+    return this.isFavorite;
+  }
+
+  set favTag(val) {
+    this.isFavorite = val;
+  }
+  
 }

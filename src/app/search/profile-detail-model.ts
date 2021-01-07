@@ -25,6 +25,7 @@ export class ProfileDetail {
   public following: string;
   public created_at: string;
   public updated_at: string;
+  // isFavorite: boolean;
 
   constructor(
     login: string,
@@ -81,4 +82,13 @@ export class ProfileDetail {
     this.created_at = created_at;
     this.updated_at = updated_at;
   }
+
+  // get favTag(): boolean {
+  //   return this.isFavorite;
+  // }
+
+  // set favTag(val) {
+  //   this.isFavorite = val;
+  // }
+  
 }
